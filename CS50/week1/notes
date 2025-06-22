@@ -1,0 +1,25 @@
+#include <stdio.h>     # standard input output # h: head files to have access to libraries
+      |- (1)  $code hello.c (file name.extention)   #containing source code
+      |- (2) make hello     make: compiler/ (translate source code->machine code)
+      |- (3) ,/hello        #run the program(execution)
+
+curly braces {}
+conditional
+
+operation <>!=
+variables -> exist in he scope I create them
+counter+=1    -> counter++
+the shorter, the better
+
+do
+{
+    n = get_int("Number: ");
+}
+while(n<1);
+-> for getting user input potentially again and again
+    do {something} no matter what
+    + potentially do it again while (some question) is true
+
+
+-int get_positive_int(void);    <-no input, yes output
+-void meow(int n);              <-yes input, no output (has side effect but nothing to return)
