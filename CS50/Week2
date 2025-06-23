@@ -1,1 +1,91 @@
+Week2
+
+ 
+1. Functions
+clang -o hello hello.c
+-> out* hello* hello.c
+<-> rm a.out
+<<<<<what's 'compiling?' in the whole>>>>
+
+-preprocessing
+  "#"<- pre pocessor directive
+  #iclude <cs50.h> is a prototype enabling "string get_string(string prompt);"
+
+-compiling
+  c -> assembly code
+-assembling
+  assembly code -> machine code
+-linking 
+  linking sets of machine code
+
+
+2. Debugging
+check using 'printf()'
+debug50
+
+3. Arrays
+int score[3]; <declaring that it's an array having three int items
+score[0] = 72;
+score[1] = 72;
+score[2] = 33;
+=> one variable istead of three (score1, score2, score3)
+better design
+                                  | const int N = 3  << constant number
+                                  | float average(int length, int array[]);
+                                  | int main(void)
+int score[3]                      | int score[N]
+for (int i = 0; i<3; i++)         | for (int i = 0; i<N; i++)
+{
+  scores[i] = get_int("Score: ");
+}
+
+print("Agerage: %f\n", (score[0]+score[1]+score[2]) / 3.0;| printf("Average: %f\n", average(N, scores));<<array itself 
+                                  | float average(int length, int array[]) << (length of the array, an array of intsegers
+                                  | {  int sum = 0;
+                                  |   for (int i = 0; i<length; i++)
+                                  |   {  sum += array[i];
+                                  |   }
+                                  |   return sum / (float) length;
+                                  |}
+
+
+4. Command Line Arguments (1h)
+
+string = sequance of chars
+%s == %c,%c,%c,...
+----------------------length.c-------------------------------
+#include <stdio.h>
+#include <cs50.h>
+
+int string_length(string name); // let the compiler know this function exists 
+int main(void)                            //main function:
+{
+    string name = get_string("Name: ");  //  1. get a string as a user input
+    int length = string_length(name);    //  2. define 'length' as the outcome of the new function
+
+    printf("%i\n", length);              // 3. print length
+}
+
+int string_length(string s)                // 4. define the new function string_length that gets a string as an input and shows an int as the output
+{
+    int n = 0;                            // 5. an int called n indicates zero
+    while (s[n] != '\0')                  // 6. as long as the value of the index(n-1)th item of the string s
+    {
+        n++;                              //7. keep increasing n by one
+    }
+    return n;                            // 8. when s[n-1] = null, return n
+}
+
+
+-> #include <string.h>
+int length = strlen(name);            // just a single line when using a library
+
+
+toupper from <ctype.h>
+use libraries!
+
+-------------------------------command line----
+int main (int argc, string argv[]) argument count & argument vector(array)
+
+echo $?
 
