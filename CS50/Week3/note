@@ -1,0 +1,29 @@
+to make it faster and quicker
+
+implementing Algorithms
+
+from <string.h>
+strcmp(s1,s2)
+return
+ +
+ 0
+ -
+ {
+    string names[]= {"Amelia", "Arrdee", "Lily", "David"};
+    string numbers[]={"+2-448-29389-234", "+2-938-232-3124", "+82-939-9238499", "+1-4310-23124-23"};
+    string name = get_string("Name: ");
+
+    for (int i = 0; i<4; i++)
+    {
+        if (strcmp(names[i], name) == 0)
+        {
+            printf("Found %s\n", numbers[i]);
+            return 0;
+        }
+    }
+    printf("No such a person\n");
+    return 1;
+    ------------------poorly designed though----, inefficient
+    -> make a new data type; structure called 'people[]'
+    bunch of different data into one data type
+    
