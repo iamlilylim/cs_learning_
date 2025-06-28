@@ -26,4 +26,22 @@ return
     ------------------poorly designed though----, inefficient
     -> make a new data type; structure called 'people[]'
     bunch of different data into one data type
-    
+
+
+    --------------
+    >>>>>>>>defining a customised 'data structure'<<<<<<<<<
+
+    1.
+    typedef struct  << c syntax
+    {
+        string name;            <<< specifications; attributes
+        int votes;
+    }
+    candidate; <<< user given name
+
+    2. how to use it
+    candidate president;
+    [type]      [variable name]
+
+    president.name = "Alice";
+    president.votes = 2;
